@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades +PraTI - Matheus Mayan Abbadi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            fontFamily: {
+                'main': ["Gentium Plus",'serif']
+            },
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="w-full h-full 
+bg-slate-800 
+font-main
+flex flex-col justify-center">
+    <header class="w-full max-h-[5rem] 
+    bg-slate-200 
+    flex justify-center">
+        <nav class="max-w-[900px] 
+        flex">
+            <ul class="w-full 
+            flex justify-center items-center self-center 
+            gap-[15px]">
+                <li><a href="#">Home</a></li>
+                <li><a href="activities.html">Atividades</a></li>
+                <svg><a href="#"></a></svg>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   <section class="banner 
+   w-full max-w-[1500px] min-h-[750px]
+   pt-[25px]
+   flex self-center">
+        <div class="container
+        flex">
+            <div class="hello-msg
+            w-[55%]
+            flex">
+                <h1 class="typewrite
+                w-[450px] h-[150px]
+                text-red-500 text-6xl font-black
+                relative top-[30%] left-[45%]" 
+                data-period="2000" data-type='[ "Hi, I´m Matheus Abbadi.", "The next-gen Developer.", "I Love Creating.", "And Love to Develop." ]'>
+                    <span class="wrap"></span>
+                </h1>
+            </div>
+            <div class="banner-image
+            w-[45%]
+            border-red-200">
+                <img src="assets/profile.jfif" alt="profile" class="
+                rounded-full border-red-200">
+            </div>
+        </div>
+   </section>
+
+    <script src="index.js"></script>
+</body>
+</html>
