@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+  <title>Next-gen To Do List</title>
+  <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        boxShadow: {
+          '3xl': '0 0 28px -15px rgba(0, 0, 0, 0.8)',
+        }
+      }
+    }
+  }
+</script>
+ 
+</head>
+<body class="flex flex-col">
+  <header class="bg-slate-600
+  w-full
+  flex justify-start items-center">
+    <nav class="w-[350px] p-[20px] pl-[30px]  gap-14
+    flex items-center">
+      <img src="https://img.freepik.com/vetores-gratis/modelo-de-logotipo-cn-profissional-criativo_23-2149230707.jpg?t=st=1731346522~exp=1731350122~hmac=ca8ad199ef3bfd10ff79a7a467ef0579d5e55159f684e7ef7b366cf207e5e32c&w=826" id="logo_img" 
+      class="w-[90px] rounded-full">
+      <ul id="items_lista" class="flex ">
+        <li class="py-1 px-2"><a href="#" class="no-underline text-purple-400 hover:text-purple-300 font-bold">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Modal -->
+  <div id="editModal" class="fixed z-50 inset-0 bg-gray-700 bg-opacity-50 flex justify-center items-center hidden">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-[400px]">
+      <h2 class="text-xl font-bold text-slate-600">Editar Tarefa</h2>
+      <div class="mt-4">
+        <label for="editTitle" class="block text-sm font-semibold text-slate-600">Título</label>
+        <input id="editTitle" type="text" class="w-full mt-2 p-2 border border-gray-300 rounded-md" placeholder="Título da tarefa">
+      </div>
+      <div class="mt-4">
+        <label for="editType" class="block text-sm font-semibold text-slate-600">Tipo</label>
+        <select id="editType" class="w-full mt-2 p-2 border border-gray-300 rounded-md">
+          <option value="studies">Estudos</option>
+          <option value="work">Trabalho</option>
+          <option value="health">Saúde</option>
+        </select>
+      </div>
+      <div class="mt-4">
+        <label for="editDescription" class="block text-sm font-semibold text-slate-600">Descrição</label>
+        <input id="editDescription" type="text" class="w-full mt-2 p-2 border border-gray-300 rounded-md" placeholder="Descrição da tarefa">
+      </div>
+      <div class="mt-6 flex justify-between">
+        <button id="cancelEditBtn" class="bg-gray-400 text-white py-2 px-4 rounded-md hover:bg-gray-500">Cancelar</button>
+        <button id="saveEditBtn" class="bg-purple-800 text-white py-2 px-4 rounded-md hover:bg-purple-600">Salvar</button>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <main class="w-[650px]
+  my-[25px] py-[25px] px-[10px]
+  bg-yellow-50 shadow-3xl rounded-lg
+  flex flex-col
+  justify-center self-center">
+    <form class="flex flex-col self-center
+    w-full py-[25px] px-[25px] relative">
+      <h1 class="self-center text-slate-600 font-bold text-[35px]">Lista de Tarefas</h1>
+      <div id="row1" class=" 
+      flex mx-auto w-[85%]
+      gap-[20px] p-[25px]">
+        <input id="input1" type="text" placeholder="Titulo da tarefa..." class="w-[66%] rounded-sm">
+        <select id="input2" class="w-[33%] rounded-sm
+        cursor-pointer" name="Typo" id="">
+          <option value="" selected hidden>Escolha</option>
+          <option value="Estudo">Estudos</option>
+          <option value="Trabalho">Trabalho</option>
+          <option value="Saude">Saude</option>
+        </select>
+      </div>
+      <div id="row2" class="flex mx-auto w-[85%]
+      gap-[20px] p-[25px]">
+        <input id="input3" type="text" placeholder="Descição da tarefa..." class="w-full rounded-sm">
+      </div>
+      <p id="err_msg" class="text-red-600
+      absolute
+      hidden
+      left-[35%]
+      bottom-[25%]">
+        Preencha todos os campos
+      </p>
+      <div id="row3" class="flex mx-auto w-[85%]
+      p-[25px]">
+        <button type="button" id="saveButton" class="w-[100%] h-[40px] mx-auto font-bold text-white rounded-sm bg-purple-800 hover:bg-purple-600">
+          Salvar
+        </button>
+      </div>
+    </form>
+
+    <section id="task_list" class="px-[5%] w-[80%] self-center flex flex-col">
+      <h1 class="text-[24px] font-bold text-slate-600">
+        Tarefas
+      </h1>
+      <h2 id="empty_msg" class="text-[28px] text-slate-800 font-bold hidden self-center">Lista vazia</h2>
+      <div id="tasks_display" class="mt-4 grid gap-4
+      lg:grid-cols-2
+      md:grid-cols-1
+      sm:grid-cols-1  ">
+      </div>
+    </section>
+  </main>
+  
+  <script src="index.js"></script>
+  <script src="list.js"></script>
+</body>
+</html>

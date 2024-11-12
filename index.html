@@ -44,31 +44,34 @@ flex flex-col justify-center">
         </nav>
     </header>
 
-   <section class="banner 
-   w-full max-w-[1500px] min-h-[750px]
-   pt-[25px]
-   flex self-center">
-        <div class="container
+   <main class="flex flex-col
+   max-w-[1500px] 
+   self-center items-center">
+        <section class="banner
+        w-full min-h-[750px]
+        pt-[25px] bg-red-200
         flex">
-            <div class="hello-msg
-            w-[55%]
+            <div class="container 
             flex">
-                <h1 class="typewrite
-                w-[450px] h-[150px]
-                text-red-500 text-6xl font-black
-                relative top-[30%] left-[45%]" 
-                data-period="2000" data-type='[ "Hi, I´m Matheus Abbadi.", "The next-gen Developer.", "I Love Creating.", "And Love to Develop." ]'>
-                    <span class="wrap"></span>
-                </h1>
+                <div class="hello-msg
+                w-[55%] bg-slate-500
+                flex">
+                    <h1 class="typewrite
+                    w-[450px] h-[150px]
+                    text-red-500 text-6xl font-black
+                    relative top-[30%] left-[45%]" 
+                    data-period="2000" data-type='[ "Hi, I´m Matheus Abbadi.", "The next-gen Developer.", "I Love Creating.", "And Love to Develop." ]'>
+                        <span class="wrap"></span>
+                    </h1>
+                </div>
+                <div id="banner-image" class="flex justify-center items-center
+                w-[45%] bg-orange-200">
+                    <img src="assets/profile.jfif" alt="profile" class="
+                    rounded-full border-red-200">
+                </div>
             </div>
-            <div class="banner-image
-            w-[45%]
-            border-red-200">
-                <img src="assets/profile.jfif" alt="profile" class="
-                rounded-full border-red-200">
-            </div>
-        </div>
-   </section>
+        </section>
+    </main>
 
     <script src="index.js"></script>
 </body>
