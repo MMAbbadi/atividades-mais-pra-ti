@@ -44,9 +44,9 @@
       <div class="mt-4">
         <label for="editType" class="block text-sm font-semibold text-slate-600">Tipo</label>
         <select id="editType" class="w-full mt-2 p-2 border border-gray-300 rounded-md">
-          <option value="studies">Estudos</option>
-          <option value="work">Trabalho</option>
-          <option value="health">Saúde</option>
+          <option value="Estudos">Estudos</option>
+          <option value="Trabalho">Trabalho</option>
+          <option value="Saúde">Saúde</option>
         </select>
       </div>
       <div class="mt-4">
@@ -60,7 +60,7 @@
     </div>
   </div>
   <!-- Modal -->
-  <main class="w-[650px]
+  <main class="lg:w-[650px] md:w-[450px] min-[320px]:w-[300px] 
   my-[25px] py-[25px] px-[10px]
   bg-yellow-50 shadow-3xl rounded-lg
   flex flex-col
@@ -69,10 +69,10 @@
     w-full py-[25px] px-[25px] relative">
       <h1 class="self-center text-slate-600 font-bold text-[35px]">Lista de Tarefas</h1>
       <div id="row1" class=" 
-      flex mx-auto w-[85%]
+      flex lg:flex-row md:flex-col min-[320px]:flex-col mx-auto w-[85%]
       gap-[20px] p-[25px]">
-        <input id="input1" type="text" placeholder="Titulo da tarefa..." class="w-[66%] rounded-sm">
-        <select id="input2" class="w-[33%] rounded-sm
+        <input id="input1" type="text" placeholder="Titulo da tarefa..." class="w-[66%]  md:w-full min-[320px]:w-full rounded-sm">
+        <select id="input2" class="w-[33%] md:w-full min-[320px]:w-full  rounded-sm
         cursor-pointer" name="Typo" id="">
           <option value="" selected hidden>Escolha</option>
           <option value="Estudo">Estudos</option>
@@ -82,7 +82,7 @@
       </div>
       <div id="row2" class="flex mx-auto w-[85%]
       gap-[20px] p-[25px]">
-        <input id="input3" type="text" placeholder="Descição da tarefa..." class="w-full rounded-sm">
+        <input id="input3" type="text" placeholder="Descrição da tarefa..." class="w-full rounded-sm">
       </div>
       <p id="err_msg" class="text-red-600
       absolute
@@ -113,6 +113,5 @@
   </main>
   
   <script src="index.js"></script>
-  <script src="list.js"></script>
 </body>
 </html>
